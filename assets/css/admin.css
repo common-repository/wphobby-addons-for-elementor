@@ -1,0 +1,289 @@
+#adminmenu .wp-menu-image img {
+    padding: 7px 0 0 0;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.inner-panel table.form-table select{
+    width: 400px;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    margin-left: 5px;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.whae-panel .cols {
+    display: flex;
+}
+
+.whae-panel .inner-panel {
+    padding: 0 20px 30px 20px;
+    background-color: #FFF;
+    margin: 15px 10px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.1);
+}
+
+.whae-panel .inner-panel {
+    flex: 1;
+}
+
+.whae-panel .panel-wrapper{
+    padding: 5px 10px 0 10px;
+}
+
+.whae-panel input[type=text],
+.whae-panel textarea{
+    width: 300px;
+}
+
+.whae-panel table td select{
+    width: 300px;
+}
+
+.success {
+    background: #343233;
+    border-color: #e8dcc6;
+    color: #e8dcc6;
+}
+.success p a{
+    color: #edddc3;
+}
+
+.alert{
+    font-size: 15px;
+    line-height: 1.5;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px;
+    padding-top: 15px;
+}
+
+.alert p{
+    font-size: 15px;
+}
+
+.alert .alert_close {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.whae-checkbox-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.whae-checkbox {
+    position: relative;
+    display: flex;
+    flex-basis: 300px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 18px 0px rgba(0, 4, 32, 0.08);
+}
+
+.whae-elements-info {
+    display: flex;
+    align-items: center;
+}
+
+.whae-checkbox label {
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+
+.whae-settings-tab.active {
+    display: block;
+}
+.whae-settings-tab {
+    display: none;
+}
+
+/*--------------------------------------------------------------
+## Message Module
+--------------------------------------------------------------*/
+.whae-message-box {
+    position: fixed;
+    top: 100px;
+    z-index: 999999;
+    right: 30%;
+    width: auto;
+    margin: 0px auto;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-animation: 0.4s slide_up cubic-bezier(0.4, 0, 0.2, 1);
+    animation: 0.4s slide_up cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.message-box {
+    background: #f9f9f9;
+    border-radius: 3px;
+    margin: 0;
+    padding: 18px 60px 18px 18px;
+    border: none;
+    font-size: 0.95em;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.65);
+}
+.message-box a {
+    color: #24262b;
+    font-weight: 600;
+    margin: 0 6px;
+}
+.message-box.success {
+    background: #9ff8d0;
+}
+
+.whae-elements-list h4 {
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 2em 10px 1em;
+    font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+## Save Button
+--------------------------------------------------------------*/
+.whae-save-btn-wrap{
+    margin: 40px 10px 30px;
+}
+
+.button.whae-btn {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 6px 20px;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    height: auto;
+    text-transform: uppercase;
+    text-shadow: none;
+    letter-spacing: 0.05em;
+}
+
+.whae-save-btn-wrap .whae-btn:hover, .whae-save-btn-wrap .whae-btn:focus {
+    background-color: #02cc7b;
+    color: #fff;
+}
